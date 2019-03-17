@@ -1,0 +1,5 @@
+{
+    "headless": true,
+    "executablePath": "/opt/headless_shell",
+    "args": ["--no-sandbox", "--disable-gpu", "--single-process"]
+}

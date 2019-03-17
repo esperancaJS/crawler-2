@@ -1,0 +1,32 @@
+service: hostelworld-spiders-3
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  timeout: 15
+  memorySize: 2048
+
+functions:
+  puppeteer-orchestrator:
+    handler: handler.index
+    layers:
+      - {Ref: ChromeLambdaLayer}
+
+  countries:
+    handler: handler.countries
+    layers:
+      - {Ref: ChromeLambdaLayer}
+
+  cities:
+    handler: handler.cities
+    layers:
+      - {Ref: ChromeLambdaLayer}
+
+  hostelDetails:
+    handler: handler.hostelDetails
+    layers:
+      - {Ref: ChromeLambdaLayer}
+
+layers:
+  chrome:
+    path: layer

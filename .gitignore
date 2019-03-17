@@ -1,0 +1,4 @@
+data-dump
+pipelines/node_modules
+spiders-serverless/node_modules
+spiders-serverless/.serverless
